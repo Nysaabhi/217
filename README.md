@@ -14473,15 +14473,15 @@ function renderServices(services, category) {
       `;
     } else if (category === "Food") {
       return `
-        <div class="menu-item" data-name="${service.name}" data-price="${service.price.replace('₹','')}">
-          <div class="menu-image">
+        <div class="fare-item" data-name="${service.name}" data-price="${service.price.replace('₹','')}">
+          <div class="fare-image">
             <img src="${service.image}" alt="${service.name}">
           </div>
-          <div class="menu-details">
+          <div class="fare-details">
             <h4>${service.name}</h4>
-            <p class="menu-description">${service.description}</p>
+            <p class="fare-description">${service.description}</p>
             ${renderVariants(service.variants)}
-            <div class="menu-actions">
+            <div class="fare-actions">
               <button class="add-to-cart" onclick="addToCart(event, '${service.name}', ${service.price.replace('₹','')})">
                 <i class="fas fa-cart-plus"></i> Add to Cart
               </button>
@@ -14490,7 +14490,7 @@ function renderServices(services, category) {
               </button>
             </div>
           </div>
-          <div class="menu-price">
+          <div class="fare-price">
             ${service.price}
           </div>
         </div>
@@ -15539,44 +15539,46 @@ function addStorePageStyles() {
       box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     }
 
-     .menu-item {
+     .fare-item {
       font-family: poppins;
       display: flex;
-      background: #fff;
+      background: #FFD700;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
-    .menu-item:hover {
-    background: #fff;
+     .fare-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      background: #FFD700;
     }
     
-    .product-image, .menu-image {
+    .product-image, .fare-image {
       width: 150px;
       height: 150px;
       flex-shrink: 0;
     }
     
-    .product-image img, .menu-image img {
+    .product-image img, .fare-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
     
-    .product-details, .menu-details {
+    .product-details, .fare-details {
       flex: 1;
       padding: 16px;
     }
     
-    .product-details h4, .menu-details h4 {
+    .product-details h4, .fare-details h4 {
       margin: 0 0 8px;
       color: #000;
       font-size: 1.1em;
     }
     
-    .product-description, .menu-description {
+    .product-description, .fare-description {
       color: #000;
       font-size: 0.9em;
       margin: 0 0 12px;
@@ -15631,7 +15633,7 @@ function addStorePageStyles() {
       background: #f9f9f9;
     }
     
-    .product-actions, .menu-actions {
+    .product-actions, .fare-actions {
       display: flex;
       gap: 10px;
     }
@@ -15679,7 +15681,7 @@ function addStorePageStyles() {
       background: #4169E1	;
     }
 
-    .menu-price {
+    .fare-price {
       width: 80px;
       display: flex;
       align-items: center;
@@ -15835,16 +15837,16 @@ function addStorePageStyles() {
     }
     
     @media (max-width: 768px) {
-      .product-item, .menu-item {
+      .product-item, .fare-item {
         flex-direction: column;
       }
       
-      .product-image, .menu-image {
+      .product-image, .fare-image {
         width: 100%;
         height: 180px;
       }
       
-      .menu-price {
+      .fare-price {
         width: 100%;
         padding: 12px;
       }
