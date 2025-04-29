@@ -15542,15 +15542,15 @@ function addStorePageStyles() {
      .menu-item {
       font-family: poppins;
       display: flex;
-      background: #FFD700;
+      background: #fff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
-     .menu-item:hover {
-      background: #FFD700;
+    .menu-item:hover {
+    background: #fff;
     }
     
     .product-image, .menu-image {
@@ -15835,20 +15835,6 @@ function addStorePageStyles() {
     }
     
     @media (max-width: 768px) {
-     .menu-item {
-      font-family: poppins;
-      display: flex;
-      background: #FFD700;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-     .menu-item:hover {
-      background: #FFD700;
-    }
-
       .product-item, .menu-item {
         flex-direction: column;
       }
