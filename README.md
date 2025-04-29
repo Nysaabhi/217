@@ -15877,7 +15877,7 @@ function updatePrice(selectElement) {
   const itemElement = selectElement.closest('[data-price]');
   if (itemElement) {
     itemElement.dataset.price = price;
-    const priceDisplay = itemElement.querySelector('.product-price, .menu-price');
+    const priceDisplay = itemElement.querySelector('.product-price, .fare-price');
     if (priceDisplay) {
       priceDisplay.textContent = `₹${price}`;
     }
