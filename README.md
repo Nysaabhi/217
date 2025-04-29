@@ -12812,7 +12812,7 @@ const locatorsData = [
       support: {
         email: "orders@dmart.com",
         phone: "+91-1234567890",
-        whatsapp: "+91-1234567890",
+        whatsapp: "+91-7869809022",
         primaryContact: "whatsapp" // or "email"
       },
       rating: "4.3",
